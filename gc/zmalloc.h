@@ -1,71 +1,87 @@
-#include <pthread.h>
+/* zmalloc - total amount of allocated memory aware version of malloc()
+ *
+ * Copyright (c) 2009-2010, Salvatore Sanfilippo <antirez at gmail dot com>
+ * All rights reserved.
+ *
+ * Redistribution and use in source and binary forms, with or without
+ * modification, are permitted provided that the following conditions are met:
+ *
+ *   * Redistributions of source code must retain the above copyright notice,
+ *     this list of conditions and the following disclaimer.
+ *   * Redistributions in binary form must reproduce the above copyright
+ *     notice, this list of conditions and the following disclaimer in the
+ *     documentation and/or other materials provided with the distribution.
+ *   * Neither the name of Redis nor the names of its contributors may be used
+ *     to endorse or promote products derived from this software without
+ *     specific prior written permission.
+ *
+ * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+ * AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+ * IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+ * ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE
+ * LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+ * CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+ * SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+ * INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
+ * CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+ * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+ * POSSIBILITY OF SUCH DAMAGE.
+ */
 
-pthread_mutex_t used_memory_mutex = PTHREAD_MUTEX_INITIALIZER;
+#ifndef __ZMALLOC_H
+#define __ZMALLOC_H
 
-#define PREFIX_SIZE (sizeof(size_t))  // 用来存放内存的大小
-#define HAVE_MALLOC_SIZE 1            // 表示需要存放内存大小
+/* Double expansion needed for stringification of macro values. */
+#define __xstr(s) __str(s)
+#define __str(s) #s
 
-static int zmalloc_thread_safe = 0; // 控制是否线程安全的标志位
-
-#ifdef HAVE_MALLOC_SIZE
-#define PREFIX_SIZE (0)
-#else
-#if defined(__sun) || defined(__sparc) || defined(__sparc__)
-#define PREFIX_SIZE (sizeof(long long))
-#else
-#define PREFIX_SIZE (sizeof(size_t))
-#endif
-#endif
-
-/* Explicitly override malloc/free etc when using tcmalloc. */
 #if defined(USE_TCMALLOC)
-#define malloc(size) tc_malloc(size)
-#define calloc(count,size) tc_calloc(count,size)
-#define realloc(ptr,size) tc_realloc(ptr,size)
-#define free(ptr) tc_free(ptr)
-#elif defined(USE_JEMALLOC)
-#define malloc(size) je_malloc(size)
-#define calloc(count,size) je_calloc(count,size)
-#define realloc(ptr,size) je_realloc(ptr,size)
-#define free(ptr) je_free(ptr)
-#endif
-
-
-// 分别定义非原子操作和原子操作的sdd,sub函数
-#ifdef HAVE_ATOMIC
-#define update_zmalloc_stat_add(__n) __sync_add_and_fetch(&used_memory, (__n))
-#define update_zmalloc_stat_sub(__n) __sync_sub_and_fetch(&used_memory, (__n))
+#define ZMALLOC_LIB ("tcmalloc-" __xstr(TC_VERSION_MAJOR) "." __xstr(TC_VERSION_MINOR))
+#include <google/tcmalloc.h>
+#if (TC_VERSION_MAJOR == 1 && TC_VERSION_MINOR >= 6) || (TC_VERSION_MAJOR > 1)
+#define HAVE_MALLOC_SIZE 1
+#define zmalloc_size(p) tc_malloc_size(p)
 #else
-#define update_zmalloc_stat_add(__n) do { \
-    pthread_mutex_lock(&used_memory_mutex); \
-    used_memory += (__n); \
-    pthread_mutex_unlock(&used_memory_mutex); \
-} while(0)
-
-#define update_zmalloc_stat_sub(__n) do { \
-    pthread_mutex_lock(&used_memory_mutex); \
-    used_memory -= (__n); \
-    pthread_mutex_unlock(&used_memory_mutex); \
-} while(0)
-
+#error "Newer version of tcmalloc required"
 #endif
 
-#define update_zmalloc_stat_alloc(__n) do { \
-    size_t _n = (__n); \
-    if (_n&(sizeof(long)-1)) _n += sizeof(long)-(_n&(sizeof(long)-1)); \
-    if (zmalloc_thread_safe) { \
-        update_zmalloc_stat_add(_n); \
-    } else { \
-        used_memory += _n; \
-    } \
-} while(0)
+#elif defined(USE_JEMALLOC)
+#define ZMALLOC_LIB ("jemalloc-" __xstr(JEMALLOC_VERSION_MAJOR) "." __xstr(JEMALLOC_VERSION_MINOR) "." __xstr(JEMALLOC_VERSION_BUGFIX))
+#include <jemalloc/jemalloc.h>
+#if (JEMALLOC_VERSION_MAJOR == 2 && JEMALLOC_VERSION_MINOR >= 1) || (JEMALLOC_VERSION_MAJOR > 2)
+#define HAVE_MALLOC_SIZE 1
+#define zmalloc_size(p) je_malloc_usable_size(p)
+#else
+#error "Newer version of jemalloc required"
+#endif
 
-#define update_zmalloc_stat_free(__n) do { \
-    size_t _n = (__n); \
-    if (_n&(sizeof(long)-1)) _n += sizeof(long)-(_n&(sizeof(long)-1)); \
-    if (zmalloc_thread_safe) { \
-        update_zmalloc_stat_sub(_n); \
-    } else { \
-        used_memory -= _n; \
-    } \
-} while(0)
+#elif defined(__APPLE__)
+#include <malloc/malloc.h>
+#define HAVE_MALLOC_SIZE 1
+#define zmalloc_size(p) malloc_size(p)
+#endif
+
+#ifndef ZMALLOC_LIB
+#define ZMALLOC_LIB "libc"
+#endif
+
+void *zmalloc(size_t size);
+void *zcalloc(size_t size);
+void *zrealloc(void *ptr, size_t size);
+void zfree(void *ptr);
+char *zstrdup(const char *s);
+size_t zmalloc_used_memory(void);
+void zmalloc_enable_thread_safeness(void);
+void zmalloc_set_oom_handler(void (*oom_handler)(size_t));
+float zmalloc_get_fragmentation_ratio(size_t rss);
+size_t zmalloc_get_rss(void);
+size_t zmalloc_get_private_dirty(void);
+size_t zmalloc_get_smap_bytes_by_field(char *field);
+size_t zmalloc_get_memory_size(void);
+void zlibc_free(void *ptr);
+
+#ifndef HAVE_MALLOC_SIZE
+size_t zmalloc_size(void *ptr);
+#endif
+
+#endif /* __ZMALLOC_H */

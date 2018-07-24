@@ -1,1 +1,1 @@
-/Library/Developer/CommandLineTools/usr/bin/cc -g -Wl,-search_paths_first -Wl,-headerpad_max_install_names  CMakeFiles/redis_learning.dir/main.c.o  -o redis_learning 
+/usr/bin/cc -g   CMakeFiles/redis_learning.dir/main.c.o  -o redis_learning 

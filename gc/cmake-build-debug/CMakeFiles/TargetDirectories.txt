@@ -1,0 +1,3 @@
+/home/wendong/CLionProjects/redis-learning/gc/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/wendong/CLionProjects/redis-learning/gc/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/wendong/CLionProjects/redis-learning/gc/cmake-build-debug/CMakeFiles/gc.dir
