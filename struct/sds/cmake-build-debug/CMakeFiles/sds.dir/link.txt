@@ -1,1 +1,0 @@
-/usr/bin/cc -g   CMakeFiles/sds.dir/sds.c.o CMakeFiles/sds.dir/home/wendong/CLionProjects/redis-learning/gc/zmalloc.c.o  -o sds 
