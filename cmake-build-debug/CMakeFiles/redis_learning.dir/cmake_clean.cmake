@@ -1,5 +1,6 @@
 file(REMOVE_RECURSE
   "CMakeFiles/redis_learning.dir/main.c.o"
+  "CMakeFiles/redis_learning.dir/struct/dict/dict.c.o"
   "redis_learning.pdb"
   "redis_learning"
 )

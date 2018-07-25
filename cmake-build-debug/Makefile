@@ -150,6 +150,33 @@ main.c.s:
 	$(MAKE) -f CMakeFiles/redis_learning.dir/build.make CMakeFiles/redis_learning.dir/main.c.s
 .PHONY : main.c.s
 
+struct/dict/dict.o: struct/dict/dict.c.o
+
+.PHONY : struct/dict/dict.o
+
+# target to build an object file
+struct/dict/dict.c.o:
+	$(MAKE) -f CMakeFiles/redis_learning.dir/build.make CMakeFiles/redis_learning.dir/struct/dict/dict.c.o
+.PHONY : struct/dict/dict.c.o
+
+struct/dict/dict.i: struct/dict/dict.c.i
+
+.PHONY : struct/dict/dict.i
+
+# target to preprocess a source file
+struct/dict/dict.c.i:
+	$(MAKE) -f CMakeFiles/redis_learning.dir/build.make CMakeFiles/redis_learning.dir/struct/dict/dict.c.i
+.PHONY : struct/dict/dict.c.i
+
+struct/dict/dict.s: struct/dict/dict.c.s
+
+.PHONY : struct/dict/dict.s
+
+# target to generate assembly for a file
+struct/dict/dict.c.s:
+	$(MAKE) -f CMakeFiles/redis_learning.dir/build.make CMakeFiles/redis_learning.dir/struct/dict/dict.c.s
+.PHONY : struct/dict/dict.c.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -162,6 +189,9 @@ help:
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... struct/dict/dict.o"
+	@echo "... struct/dict/dict.i"
+	@echo "... struct/dict/dict.s"
 .PHONY : help
 
 

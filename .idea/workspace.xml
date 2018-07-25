@@ -2,7 +2,7 @@
 <project version="4">
   <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true" buildAllGenerated="true">
     <generated>
-      <config projectName="redis_learning" targetName="sds" />
+      <config projectName="redis_learning" targetName="redis_learning" />
     </generated>
   </component>
   <component name="CMakeSettings">
@@ -12,12 +12,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6b79ecd3-35d9-448b-ad85-dff960ab064d" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/struct/sds/CMakeLists.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/struct/sds/sds.c" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/struct/sds/sds.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/struct/sds/sdsalloc.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/struct/dict/dict.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/struct/dict/dict.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progress.marks" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progress.marks" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/redis_learning.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/redis_learning.dir/DependInfo.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/redis_learning.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/redis_learning.dir/build.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/redis_learning.dir/cmake_clean.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/redis_learning.dir/cmake_clean.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/redis_learning.dir/link.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/redis_learning.dir/link.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/redis_learning.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/redis_learning.dir/progress.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/redis_learning.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/redis_learning.cbp" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <ignored path="$PROJECT_DIR$/gc/cmake-build-debug/" />
@@ -32,7 +40,7 @@
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file leaf-file-name="sdsalloc.h" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/struct/sds/sdsalloc.h">
           <provider selected="true" editor-type-id="text-editor">
@@ -42,33 +50,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="zmalloc.h" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/gc/zmalloc.h">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="67" column="7" selection-start-line="67" selection-start-column="7" selection-end-line="67" selection-end-column="7" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="zmalloc.c" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/gc/zmalloc.c">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="123" column="28" selection-start-line="123" selection-start-column="28" selection-end-line="123" selection-end-column="28" />
-              <folding>
-                <element signature="e#1683#1701#0" expanded="true" />
-                <element signature="e#2076#2095#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="sds.c" pinned="false" current-in-tab="true">
+      <file leaf-file-name="sds.c" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/struct/sds/sds.c">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="293">
-              <caret line="588" column="4" selection-start-line="588" selection-start-column="4" selection-end-line="588" selection-end-column="4" />
+            <state relative-caret-position="10740">
+              <caret line="716" column="35" selection-start-line="716" selection-start-column="35" selection-end-line="716" selection-end-column="35" />
               <folding>
                 <element signature="e#1728#1746#0" expanded="true" />
               </folding>
@@ -76,44 +62,60 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CMakeCache.txt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/struct/sds/cmake-build-debug/CMakeCache.txt">
+      <file leaf-file-name="dict.c" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/struct/dict/dict.c">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-3579" />
+            <state relative-caret-position="-813">
+              <caret line="888" column="12" lean-forward="true" selection-start-line="888" selection-start-column="12" selection-end-line="888" selection-end-column="12" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="limits.h" pinned="false" current-in-tab="false">
+        <entry file="file:///usr/lib/gcc/x86_64-linux-gnu/5/include-fixed/limits.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1950">
+              <caret line="130" column="17" selection-start-line="130" selection-start-column="17" selection-end-line="130" selection-end-column="17" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="dict.h" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/struct/dict/dict.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="289">
+              <caret line="67" column="25" lean-forward="true" selection-start-line="67" selection-start-column="25" selection-end-line="67" selection-end-column="25" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CMakeLists.txt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="75">
+              <caret line="5" column="29" selection-start-line="5" selection-start-column="29" selection-end-line="5" selection-end-column="29" />
+            </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="Makefile" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/struct/sds/cmake-build-debug/Makefile">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-2410" />
-          </provider>
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file leaf-file-name="redis_learning.cbp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/struct/sds/cmake-build-debug/redis_learning.cbp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-745" />
-          </provider>
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file leaf-file-name="sds.h" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/struct/sds/sds.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="413">
-              <caret line="246" column="42" lean-forward="true" selection-start-line="246" selection-start-column="42" selection-end-line="246" selection-end-column="42" />
+            <state relative-caret-position="3780">
+              <caret line="252" column="91" selection-start-line="252" selection-start-column="91" selection-end-line="252" selection-end-column="91" />
               <folding>
                 <element signature="e#1799#1821#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="adlist.h" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/struct/adlist/adlist.h">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="444">
-              <caret line="77" column="26" selection-start-line="77" selection-start-column="26" selection-end-line="77" selection-end-column="26" />
             </state>
           </provider>
         </entry>
@@ -152,6 +154,9 @@
         <option value="$PROJECT_DIR$/struct/sds/CMakeLists.txt" />
         <option value="$PROJECT_DIR$/struct/sds/sds.c" />
         <option value="$PROJECT_DIR$/struct/sds/sds.h" />
+        <option value="$PROJECT_DIR$/CMakeLists.txt" />
+        <option value="$PROJECT_DIR$/struct/dict/dict.c" />
+        <option value="$PROJECT_DIR$/struct/dict/dict.h" />
       </list>
     </option>
   </component>
@@ -176,33 +181,29 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
               <item name="redis_learning" type="b2602c69:ProjectViewProjectNode" />
-              <item name="redis-learning" type="47feb1d3:ProjectViewModuleNode" />
+              <item name="redis-learning" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="redis_learning" type="b2602c69:ProjectViewProjectNode" />
-              <item name="redis-learning" type="47feb1d3:ProjectViewModuleNode" />
-              <item name="sds" type="462c0819:PsiDirectoryNode" />
+              <item name="redis-learning" type="462c0819:PsiDirectoryNode" />
+              <item name="struct" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="redis_learning" type="b2602c69:ProjectViewProjectNode" />
-              <item name="redis-learning" type="47feb1d3:ProjectViewModuleNode" />
-              <item name="sds" type="462c0819:PsiDirectoryNode" />
-              <item name="cmake-build-debug" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="redis_learning" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="redis-learning" type="462c0819:PsiDirectoryNode" />
+              <item name="struct" type="462c0819:PsiDirectoryNode" />
+              <item name="dict" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -213,6 +214,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/struct/dict" />
       <recent name="$PROJECT_DIR$/struct/sds" />
       <recent name="$PROJECT_DIR$/struct/adlist" />
       <recent name="$PROJECT_DIR$/gc" />
@@ -231,12 +233,12 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.sds">
+  <component name="RunManager" selected="Application.redis_learning">
     <configuration name="Build All" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="redis_learning" RUN_TARGET_NAME="sds" EXPLICIT_BUILD_TARGET_NAME="all" />
-    <configuration name="sds" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="redis_learning" TARGET_NAME="sds" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="redis_learning" RUN_TARGET_NAME="sds" />
+    <configuration name="redis_learning" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="redis_learning" TARGET_NAME="redis_learning" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="redis_learning" RUN_TARGET_NAME="redis_learning" />
     <list>
       <item itemvalue="Application.Build All" />
-      <item itemvalue="Application.sds" />
+      <item itemvalue="Application.redis_learning" />
     </list>
   </component>
   <component name="SvnConfiguration">
@@ -249,35 +251,36 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1532396155444</updated>
-      <workItem from="1532396156634" duration="13485000" />
+      <workItem from="1532396156634" duration="15790000" />
+      <workItem from="1532488735029" duration="7049000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="13485000" />
+    <option name="totallyTimeSpent" value="22839000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="65" y="-4" width="1855" height="1084" extended-state="6" />
+    <frame x="64" y="-11" width="1857" height="1092" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18722707" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Messages" visible="true" weight="0.017838405" />
-      <window_info anchor="bottom" id="CMake" />
-      <window_info anchor="bottom" id="Event Log" side_tool="true" />
+      <window_info anchor="bottom" id="CMake" order="7" />
+      <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.40301976" />
-      <window_info anchor="bottom" id="Version Control" weight="0.329849" />
+      <window_info anchor="bottom" id="Version Control" order="7" weight="0.329849" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Terminal" weight="0.041811846" />
+      <window_info anchor="bottom" id="Terminal" order="7" visible="true" weight="0.032528855" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39953542" />
-      <window_info id="Favorites" side_tool="true" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Messages" order="7" weight="0.017838405" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -299,21 +302,77 @@
           <option name="timeStamp" value="4" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="7" />
+      <option name="time" value="11" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/gc/cmake-build-debug/CMakeFiles/gc.dir/link.txt">
+    <entry file="file://$PROJECT_DIR$/struct/sds/sdsalloc.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="585">
+          <caret line="39" column="24" selection-start-line="39" selection-start-column="24" selection-end-line="39" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/struct/sds/sds.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="10740">
+          <caret line="716" column="35" selection-start-line="716" selection-start-column="35" selection-end-line="716" selection-end-column="35" />
+          <folding>
+            <element signature="e#1728#1746#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/lib/gcc/x86_64-linux-gnu/5/include-fixed/limits.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1950">
+          <caret line="130" column="17" selection-start-line="130" selection-start-column="17" selection-end-line="130" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/struct/dict/dict.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2430">
+          <caret line="162" column="8" selection-start-line="162" selection-start-column="8" selection-end-line="162" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="29" lean-forward="true" selection-start-line="5" selection-start-column="29" selection-end-line="5" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/struct/sds/cmake-build-debug/Makefile">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/gc/cmake-build-debug/CMakeFiles/gc.dir/flags.make">
+    <entry file="file://$PROJECT_DIR$/struct/sds/cmake-build-debug/redis_learning.cbp">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/config.h">
-      <provider selected="true" editor-type-id="text-editor" />
+    <entry file="file://$PROJECT_DIR$/struct/sds/sds.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3780">
+          <caret line="252" column="91" selection-start-line="252" selection-start-column="91" selection-end-line="252" selection-end-column="91" />
+          <folding>
+            <element signature="e#1799#1821#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/gc/README.md">
-      <provider selected="true" editor-type-id="text-editor" />
+    <entry file="file://$PROJECT_DIR$/struct/sds/CMakeLists.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="32" selection-start-line="5" selection-start-column="32" selection-end-line="5" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/struct/dict/dict.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3675">
+          <caret line="245" column="32" lean-forward="true" selection-start-line="245" selection-start-column="32" selection-end-line="245" selection-end-column="32" />
+        </state>
+      </provider>
     </entry>
     <entry file="file:///usr/include/malloc.h">
       <provider selected="true" editor-type-id="text-editor">
@@ -328,9 +387,6 @@
           <caret line="491" column="14" selection-start-line="491" selection-start-column="14" selection-end-line="491" selection-end-column="14" />
         </state>
       </provider>
-    </entry>
-    <entry file="file:///usr/include/alloca.h">
-      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/gc/CMakeLists.txt">
       <provider selected="true" editor-type-id="text-editor">
@@ -356,9 +412,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/struct/adlist/CMakeLists.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
@@ -370,13 +423,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
           <caret line="5" column="1" selection-start-line="5" selection-start-column="1" selection-end-line="5" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="32" selection-start-line="5" selection-start-column="32" selection-end-line="5" selection-end-column="32" />
         </state>
       </provider>
     </entry>
@@ -405,10 +451,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
           <caret line="123" column="28" selection-start-line="123" selection-start-column="28" selection-end-line="123" selection-end-column="28" />
-          <folding>
-            <element signature="e#1683#1701#0" expanded="true" />
-            <element signature="e#2076#2095#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -418,14 +460,10 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/struct/sds/cmake-build-debug/Makefile">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2410" />
-      </provider>
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/struct/sds/cmake-build-debug/redis_learning.cbp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-745" />
-      </provider>
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/struct/sds/CMakeLists.txt">
       <provider selected="true" editor-type-id="text-editor">
@@ -443,8 +481,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/struct/sds/sds.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="413">
-          <caret line="246" column="42" lean-forward="true" selection-start-line="246" selection-start-column="42" selection-end-line="246" selection-end-column="42" />
+        <state relative-caret-position="3780">
+          <caret line="252" column="91" selection-start-line="252" selection-start-column="91" selection-end-line="252" selection-end-column="91" />
           <folding>
             <element signature="e#1799#1821#0" expanded="true" />
           </folding>
@@ -453,11 +491,39 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/struct/sds/sds.c">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="293">
-          <caret line="588" column="4" selection-start-line="588" selection-start-column="4" selection-end-line="588" selection-end-column="4" />
+        <state relative-caret-position="10740">
+          <caret line="716" column="35" selection-start-line="716" selection-start-column="35" selection-end-line="716" selection-end-column="35" />
           <folding>
             <element signature="e#1728#1746#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="29" selection-start-line="5" selection-start-column="29" selection-end-line="5" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/lib/gcc/x86_64-linux-gnu/5/include-fixed/limits.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1950">
+          <caret line="130" column="17" selection-start-line="130" selection-start-column="17" selection-end-line="130" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/struct/dict/dict.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="67" column="25" lean-forward="true" selection-start-line="67" selection-start-column="25" selection-end-line="67" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/struct/dict/dict.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-813">
+          <caret line="888" column="12" lean-forward="true" selection-start-line="888" selection-start-column="12" selection-end-line="888" selection-end-column="12" />
         </state>
       </provider>
     </entry>

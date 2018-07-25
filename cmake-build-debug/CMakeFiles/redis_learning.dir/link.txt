@@ -1,1 +1,1 @@
-/usr/bin/cc -g   CMakeFiles/redis_learning.dir/main.c.o  -o redis_learning 
+/usr/bin/cc -g   CMakeFiles/redis_learning.dir/main.c.o CMakeFiles/redis_learning.dir/struct/dict/dict.c.o  -o redis_learning 

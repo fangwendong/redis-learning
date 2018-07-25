@@ -81,6 +81,12 @@
 		<Unit filename="/home/wendong/CLionProjects/redis-learning/main.c">
 			<Option target="redis_learning"/>
 		</Unit>
+		<Unit filename="/home/wendong/CLionProjects/redis-learning/struct/dict/dict.c">
+			<Option target="redis_learning"/>
+		</Unit>
+		<Unit filename="/home/wendong/CLionProjects/redis-learning/struct/dict/dict.h">
+			<Option target="redis_learning"/>
+		</Unit>
 		<Unit filename="/home/wendong/CLionProjects/redis-learning/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>

@@ -5,6 +5,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
   "/home/wendong/CLionProjects/redis-learning/main.c" "/home/wendong/CLionProjects/redis-learning/cmake-build-debug/CMakeFiles/redis_learning.dir/main.c.o"
+  "/home/wendong/CLionProjects/redis-learning/struct/dict/dict.c" "/home/wendong/CLionProjects/redis-learning/cmake-build-debug/CMakeFiles/redis_learning.dir/struct/dict/dict.c.o"
   )
 set(CMAKE_C_COMPILER_ID "GNU")
 
