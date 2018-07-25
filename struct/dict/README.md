@@ -37,7 +37,7 @@
  * 3.使用到的几个hash算法
      
 
-     1.针对int的hash函数
+     1. 针对int的hash函数
      
               unsigned int dictIntHashFunction(unsigned int key) {
                   key += ~(key << 15);
@@ -49,7 +49,7 @@
                   return key;
               }
        
-     2.MurmurHash2算法
+     2. MurmurHash2算法
         
               unsigned int dictGenHashFunction(const void *key, int len) {
                   /* 'm' and 'r' are mixing constants generated offline.
