@@ -6,3 +6,4 @@
 | adlist        |双向链表      |   [adlist](https://github.com/fangwendong/redis-learning/tree/master/struct/adlist)    |
 | sds        | 动态字符串      |   [sds](https://github.com/fangwendong/redis-learning/tree/master/struct/sds)     |
 | dict       | 字典(hash table)|   [dict](https://github.com/fangwendong/redis-learning/tree/master/struct/dict)    |
+| skiplist   | 跳跃表           |  [skiplist](https://github.com/fangwendong/redis-learning/tree/master/struct/skiplist) |
