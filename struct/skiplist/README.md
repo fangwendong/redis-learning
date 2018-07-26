@@ -88,7 +88,7 @@ redis实现的跳跃表特点:
         zsl->tail = NULL;
 
         return zsl;
-      }
+       }
       
        // 创建新节点
         zskiplistNode *zslCreateNode(int level, double score, robj *obj) {
@@ -101,7 +101,7 @@ redis实现的跳跃表特点:
         zn->obj = obj;
 
         return zn;
-      }
+       }
       
       
  * 插入一个节点
