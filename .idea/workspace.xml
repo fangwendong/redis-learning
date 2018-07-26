@@ -9,10 +9,7 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3a230e28-5a22-4571-8a8d-44c66efb7f41" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/struct/skiplist/t_zset.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="3a230e28-5a22-4571-8a8d-44c66efb7f41" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <ignored path="$PROJECT_DIR$/gc/cmake-build-debug/" />
     <ignored path="$PROJECT_DIR$/struct/adlist/cmake-build-debug/" />
@@ -56,8 +53,8 @@
       <file leaf-file-name="t_zset.c" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/struct/skiplist/t_zset.c">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="476">
-              <caret line="638" column="1" lean-forward="true" selection-start-line="638" selection-start-column="1" selection-end-line="638" selection-end-column="1" />
+            <state relative-caret-position="9406">
+              <caret line="689" column="1" selection-start-line="689" selection-start-column="1" selection-end-line="689" selection-end-column="1" />
             </state>
           </provider>
         </entry>
@@ -77,8 +74,8 @@
       <file leaf-file-name="redis.h" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/struct/skiplist/redis.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="297">
-              <caret line="1714" column="11" lean-forward="true" selection-start-line="1714" selection-start-column="11" selection-end-line="1714" selection-end-column="11" />
+            <state relative-caret-position="723">
+              <caret line="1735" column="73" selection-start-line="1735" selection-start-column="73" selection-end-line="1735" selection-end-column="73" />
             </state>
           </provider>
         </entry>
@@ -151,8 +148,8 @@
         <option value="$PROJECT_DIR$/CMakeLists.txt" />
         <option value="$PROJECT_DIR$/struct/dict/dict.h" />
         <option value="$PROJECT_DIR$/struct/dict/dict.c" />
-        <option value="$PROJECT_DIR$/struct/skiplist/redis.h" />
         <option value="$PROJECT_DIR$/struct/skiplist/t_zset.c" />
+        <option value="$PROJECT_DIR$/struct/skiplist/redis.h" />
       </list>
     </option>
   </component>
@@ -260,7 +257,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="33992000" />
+    <option name="totallyTimeSpent" value="34391000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -275,7 +272,7 @@
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25019857" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25019857" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32965517" />
       <window_info anchor="bottom" id="CMake" order="7" weight="0.32965517" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
@@ -283,7 +280,7 @@
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.32965517" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Terminal" order="7" visible="true" weight="0.067586206" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="7" visible="true" weight="0.65931034" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -579,15 +576,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/struct/skiplist/redis.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="297">
-          <caret line="1714" column="11" lean-forward="true" selection-start-line="1714" selection-start-column="11" selection-end-line="1714" selection-end-column="11" />
+        <state relative-caret-position="723">
+          <caret line="1735" column="73" selection-start-line="1735" selection-start-column="73" selection-end-line="1735" selection-end-column="73" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/struct/skiplist/t_zset.c">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="638" column="1" lean-forward="true" selection-start-line="638" selection-start-column="1" selection-end-line="638" selection-end-column="1" />
+        <state relative-caret-position="9406">
+          <caret line="689" column="1" selection-start-line="689" selection-start-column="1" selection-end-line="689" selection-end-column="1" />
         </state>
       </provider>
     </entry>
