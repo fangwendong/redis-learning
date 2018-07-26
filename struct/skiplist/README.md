@@ -63,10 +63,10 @@ redis实现的跳跃表特点:
     
  * 创建一条skiplist
 
-      // 创建一条长度为0的skiplist
-      zskiplist *zslCreate(void) {
-        int j;
-        zskiplist *zsl;
+          // 创建一条长度为0的skiplist
+            zskiplist *zslCreate(void) {
+            int j;
+            zskiplist *zsl;
 
         // 分配空间
         zsl = zmalloc(sizeof(*zsl));
@@ -91,7 +91,7 @@ redis实现的跳跃表特点:
       }
       
        // 创建新节点
-      zskiplistNode *zslCreateNode(int level, double score, robj *obj) {
+        zskiplistNode *zslCreateNode(int level, double score, robj *obj) {
 
         // 分配空间
         zskiplistNode *zn = zmalloc(sizeof(*zn)+level*sizeof(struct zskiplistLevel));
